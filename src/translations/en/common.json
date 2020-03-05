@@ -1,0 +1,8 @@
+{
+    "Login": "Login",
+    "Logout": "Logout",
+    "pages": {
+        "Security": "Settings",
+        "Dashboard": "Dashboard"
+    }
+}
