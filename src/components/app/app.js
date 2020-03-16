@@ -1,6 +1,10 @@
 import React from "react";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+
+import { HomePage, NewsPage } from "../pages";
+
+import "../../assets/bootstrap.min.css";
 
 // import ChangeLang from "../changeLang/changeLang";
 // import Article from "../article/article";
@@ -8,61 +12,60 @@ import { useTranslation } from "react-i18next";
 function App() {
     const { t, i18n } = useTranslation();
     return (
-        <div className="app">
-            <h1>App</h1>
-            <div>
-                <button onClick={() => i18n.changeLanguage("en")}>en</button>
-                <button onClick={() => i18n.changeLanguage("ru")}>ru</button>
+        <Router>
+            <header
+                style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    padding: "10px 30px"
+                }}
+            >
+                <nav className="navbar-nav" style={{ flexDirection: "row" }}>
+                    <Link
+                        className="nav-link"
+                        style={{ marginRight: "10px" }}
+                        to="/"
+                    >
+                        {t("pages.home")}
+                    </Link>
+                    <Link
+                        className="nav-link"
+                        style={{ marginRight: "10px" }}
+                        to="/news"
+                    >
+                        {t("pages.news")}
+                    </Link>
+                </nav>
+                <div>
+                    <button
+                        className="btn btn-outline-info"
+                        onClick={() => i18n.changeLanguage("en")}
+                        style={{ marginLeft: "10px" }}
+                    >
+                        en
+                    </button>
+                    <button
+                        className="btn btn-outline-info"
+                        onClick={() => i18n.changeLanguage("ru")}
+                        style={{ marginLeft: "10px" }}
+                    >
+                        ru
+                    </button>
+                </div>
+            </header>
+            <div className="app">
+                <Switch>
+                    <Route exact path="/">
+                        <HomePage />
+                    </Route>
+                    <Route exact path="/news">
+                        <NewsPage />
+                    </Route>
+                </Switch>
+                {/* <p>{t("Login")}</p> */}
             </div>
-            <p>{t("pages.Security")}</p>
-            <p>{t("Login")}</p>
-            {/* <h1>App Component</h1>
-            <ChangeLang />
-            <p>{t("Settings")}</p> */}
-            {/* <Article article="Settings" />
-            <Article article="Dashboard" />
-            <Article article="Login" />
-            <Article article="Logout" /> */}
-        </div>
+        </Router>
     );
 }
 
 export default App;
-
-// import React, { Component } from "react";
-// import ReactDOM from "react-dom";
-// import { useTranslation, Trans } from "react-i18next";
-
-// export default function App() {
-//     const { t, i18n } = useTranslation();
-
-//     const changeLanguage = lng => {
-//         i18n.changeLanguage(lng);
-//     };
-
-//     const index = 11;
-
-//     return (
-//         <div className="App">
-//             <div className="App-header">
-//                 <h2>{t("Welcome to React")}</h2>
-//                 <button onClick={() => changeLanguage("de")}>de</button>
-//                 <button onClick={() => changeLanguage("en")}>en</button>
-//             </div>
-//             <div className="App-intro">
-//                 <Trans>
-//                     To get started, edit <code>src/App.js</code> and save to
-//                     reload.
-//                 </Trans>
-//                 <Trans i18nKey="welcome">trans</Trans>
-//                 <Trans>
-//                     {index + 1} <a>xxx</a>
-//                 </Trans>
-//             </div>
-//             <div style={{ marginTop: 40 }}>
-//                 Learn more:&nbsp;
-//                 <a href="https://react.i18next.com">https://react.i18next.js</a>
-//             </div>
-//         </div>
-//     );
-// }

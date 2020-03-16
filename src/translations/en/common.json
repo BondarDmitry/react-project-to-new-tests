@@ -2,7 +2,18 @@
     "Login": "Login",
     "Logout": "Logout",
     "pages": {
-        "Security": "Settings",
-        "Dashboard": "Dashboard"
+        "page": "page",
+        "home": "Home",
+        "news": "News"
+    },
+    "article_list": {
+        "first_article": {
+            "title": "Article 1 title",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non purus ut augue condimentum vulputate quis non leo. Fusce pulvinar eros id urna ornare tempus."
+        },
+        "second_article": {
+            "title": "Article 2 title",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non purus ut augue condimentum vulputate quis non leo. Fusce pulvinar eros id urna ornare tempus."
+        }
     }
 }
