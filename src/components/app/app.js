@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { HomePage, NewsPage } from "../pages";
+import { HomePage, NewsPage, EmojiPage, GoogleChartPage } from "../pages";
 
 import "../../assets/bootstrap.min.css";
 
@@ -17,23 +17,37 @@ function App() {
                 style={{
                     display: "flex",
                     justifyContent: "space-between",
-                    padding: "10px 30px"
+                    padding: "10px 30px",
                 }}
             >
                 <nav className="navbar-nav" style={{ flexDirection: "row" }}>
                     <Link
                         className="nav-link"
-                        style={{ marginRight: "10px" }}
+                        style={{ marginRight: "20px" }}
                         to="/"
                     >
                         {t("pages.home")}
                     </Link>
                     <Link
                         className="nav-link"
-                        style={{ marginRight: "10px" }}
+                        style={{ marginRight: "20px" }}
                         to="/news"
                     >
                         {t("pages.news")}
+                    </Link>
+                    <Link
+                        className="nav-link"
+                        style={{ marginRight: "20px" }}
+                        to="/google-chart"
+                    >
+                        {t("pages.google-chart")}
+                    </Link>
+                    <Link
+                        className="nav-link"
+                        style={{ marginRight: "20px" }}
+                        to="/emoji"
+                    >
+                        {t("pages.emoji")}
                     </Link>
                 </nav>
                 <div>
@@ -60,6 +74,12 @@ function App() {
                     </Route>
                     <Route exact path="/news">
                         <NewsPage />
+                    </Route>
+                    <Route exact path="/google-chart">
+                        <GoogleChartPage />
+                    </Route>
+                    <Route exact path="/emoji">
+                        <EmojiPage />
                     </Route>
                 </Switch>
                 {/* <p>{t("Login")}</p> */}

@@ -4,7 +4,9 @@
     "pages": {
         "page": "страница",
         "home": "Начальная",
-        "news": "Новости"
+        "news": "Новости",
+        "google-chart": "Гугл диаграммы",
+        "emoji": "Смайлы"
     },
     "article_list": {
         "first_article": {

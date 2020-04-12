@@ -4,7 +4,9 @@
     "pages": {
         "page": "page",
         "home": "Home",
-        "news": "News"
+        "news": "News",
+        "google-chart": "Google Chart",
+        "emoji": "Emoji"
     },
     "article_list": {
         "first_article": {
