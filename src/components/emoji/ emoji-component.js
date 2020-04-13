@@ -1,16 +1,15 @@
 import React from "react";
 import "emoji-mart/css/emoji-mart.css";
-import { Picker } from "emoji-mart";
+
 import { Emoji } from "emoji-mart";
 
 const EmojiComponent = () => {
-    const addEmoji = () => console.log("lol");
-    const smile = String.fromCodePoint(0x1f4ac);
+    // const smile = String.fromCodePoint(0x1f4ac);
     return (
         <div>
-            <p>😀</p>
+            {/* <p>😀</p>
 
-            <p>{smile}</p>
+            <p>{smile}</p> */}
             <Emoji emoji={{ id: "rat" }} size={64} />
             <Emoji emoji={{ id: "rat" }} size={256} />
             <Emoji emoji=":rat:" set="google" size={64} />

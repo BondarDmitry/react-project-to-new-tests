@@ -6,7 +6,8 @@
         "home": "Начальная",
         "news": "Новости",
         "google-chart": "Гугл диаграммы",
-        "emoji": "Смайлы"
+        "emoji": "Смайлы",
+        "teams": "Команды"
     },
     "article_list": {
         "first_article": {
