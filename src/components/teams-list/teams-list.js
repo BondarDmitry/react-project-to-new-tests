@@ -1,5 +1,6 @@
 import React from "react";
 import Spinner from "../spinner";
+import ErrorIndicator from "../error-indicator/error-indicator";
 
 const TeamsList = ({ teamsListData }) => {
     const { teamsList, loading, error } = teamsListData;
@@ -9,7 +10,7 @@ const TeamsList = ({ teamsListData }) => {
     }
 
     if (error) {
-        return <p>Error</p>;
+        return <ErrorIndicator error={error} />;
     }
 
     if (teamsList) {

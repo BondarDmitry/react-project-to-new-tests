@@ -16,6 +16,7 @@ class TeamsPage extends Component {
     componentDidMount() {
         this.API.getTeams()
             .then((teamsListData) => {
+                console.log(teamsListData);
                 this.setState((state) => {
                     return {
                         ...state,
@@ -27,11 +28,24 @@ class TeamsPage extends Component {
                     };
                 });
             })
-            .catch((error) => console.log(error));
+            .catch((error) => {
+                console.log(error);
+                this.setState((state) => {
+                    return {
+                        ...state,
+                        teamsListData: {
+                            ...state.teamsListData,
+                            error: error,
+                            loading: false,
+                        },
+                    };
+                });
+            });
     }
 
     render() {
         const { t } = this.props;
+        console.log(this.state);
         return (
             <section className="teams-page">
                 <h1 className="text-center">{t("pages.teams")}</h1>
@@ -51,6 +65,4 @@ class TeamsPage extends Component {
         );
     }
 }
-
-// export default TeamsPage;
 export default withTranslation()(TeamsPage);
