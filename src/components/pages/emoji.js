@@ -1,6 +1,6 @@
 import React from "react";
 
-import EmojiComponent from "../emoji/ emoji-component";
+import EmojiComponent from "../emoji/emoji-component";
 
 const EmojiPage = () => {
     return <EmojiComponent />;
