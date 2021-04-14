@@ -48,6 +48,27 @@ const Header = () => {
                 >
                     {t("pages.teams")}
                 </Link>
+                <Link
+                    className="nav-link"
+                    style={{ marginRight: "20px" }}
+                    to="/react-hooks"
+                >
+                    {t("pages.hooks")}
+                </Link>
+                <Link
+                    className="nav-link"
+                    style={{ marginRight: "20px" }}
+                    to="/calendar"
+                >
+                    {t("pages.calendar")}
+                </Link>
+                <Link
+                    className="nav-link"
+                    style={{ marginRight: "20px" }}
+                    to="/context"
+                >
+                    {t("pages.context")}
+                </Link>
             </nav>
             <div>
                 <button

@@ -7,7 +7,10 @@
         "news": "Новости",
         "google-chart": "Гугл диаграммы",
         "emoji": "Смайлы",
-        "teams": "Команды"
+        "teams": "Команды",
+        "hooks": "Хуки Реакт",
+        "calendar": "Календарь",
+        "context": "Контекст"
     },
     "article_list": {
         "first_article": {

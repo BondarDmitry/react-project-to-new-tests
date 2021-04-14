@@ -8,6 +8,9 @@ import {
     EmojiPage,
     GoogleChartPage,
     TeamsPage,
+    ReactHooksPage,
+    CalendarPage,
+    ContextPage
 } from "../pages";
 
 import "../../assets/bootstrap.min.css";
@@ -32,6 +35,15 @@ const App = () => {
                     </Route>
                     <Route exact path="/teams">
                         <TeamsPage />
+                    </Route>
+                    <Route exact path="/react-hooks">
+                        <ReactHooksPage />
+                    </Route>
+                    <Route exact path="/calendar">
+                        <CalendarPage />
+                    </Route>
+                    <Route exact path="/context">
+                        <ContextPage />
                     </Route>
                 </Switch>
             </div>
