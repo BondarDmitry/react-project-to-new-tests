@@ -8,6 +8,7 @@ const HomePage = () => {
             <h1 className="text-center">
                 {t("pages.home")} {t("pages.page")}
             </h1>
+            <p>KEK</p>
         </div>
     );
 };
